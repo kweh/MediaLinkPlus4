@@ -25,7 +25,7 @@
 ; * Huvudscript
 ; ************************************************************
 
-#if (mlActive()) ; Nedanstående körs endast om mlActive är 'true' eller
+#if (mlActive()) ; Nedanstående körs endast om mlActive är 'true'
 
 Rbutton:: ; Vid klick på höger musknapp
 	if (menu) ; om menyn redan visats en gång (menu = true), ta bort allt innehåll och populera menyn på nytt
