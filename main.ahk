@@ -1,4 +1,4 @@
-
+﻿
 ; ************************************************************
 ; * Initial setup
 ; ************************************************************
@@ -34,6 +34,7 @@ Rbutton:: ; Vid klick på höger musknapp
 		menu := false
 	}
 	Menu, r_menu, Add, Ordernummer, get_ordernumber
+	Menu, r_menu, Add, Test, get_ordernumber
 	Menu, r_menu, Show
 	menu := true ; Sätter %menu% till 'true'. Dvs att menyn har visats en gång
 Return
