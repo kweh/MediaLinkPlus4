@@ -1,0 +1,1 @@
+dir_main := A_ScriptDir

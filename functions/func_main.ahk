@@ -15,10 +15,10 @@
 
 mlActive(x=false)
 {
-	IfWinActive, NewsCycle MediaLink ; Om det aktiva fönstrets titelrad innehåller "NewsCycle MediaLink"
+	IfWinActive, NewsCycle MediaLink ; Om det aktiva fönstrets titelrad innehåller "NewsCycle MediaLink"...
 	{
 		MouseGetPos, pos_x, pos_y, win_name, control ; Spara namnet på den control som är under muspekaren och lagra det i %control%
-		if (InStr(control, "SysListView")) ; Om %control% innehåller "SysListView"
+		if (InStr(control, "SysListView")) ; Om %control% innehåller "SysListView"...
 		{
 			return control ; returnera 'true'
 		}
@@ -60,4 +60,41 @@ getOrdernumber(x=False)
 	obj.material := order_split2 ; sätter %obj.material% till endast materialnummer
 
 	return obj ; returnerar objektet
+}
+
+; ******************************************************************************************
+; *  toLog
+; * ----------------------------------------------------------------------------------------
+; * Skriver input till console.txt för att sedan visas i console
+; * ----------------------------------------------------------------------------------------
+; * INPUT:
+; * - Variabel
+; * - String
+; * - Kombination av ovanstående
+; *
+; * OUTPUT:
+; * - Ingen output, endast append till textfil
+; *
+; *******************************************************************************************
+
+toLog(txt)
+{
+	FormatTime, timestamp, ,HH:mm:ss
+	FileAppend, `n%timestamp% - %txt%, %dir_main%console.txt ; Lägger till input i console.txt
+	IfWinExist, console ; Om console är öppen...
+	{
+		Loop, Read, %dir_main%console.txt ; Läser innehållet i console.txt - rad för rad
+		{
+			num_lines := A_Index ; sätter %num_lines% till antalet rader
+		}
+		from_line := num_lines - 15 ; sätter %from_line% till antalet rader - 10. Ändra här för att välja hur många rader som ska listas.
+		Loop, Read, %dir_main%console.txt ; Läser innehållet i console.txt - rad för rad
+		{
+			if (A_Index > from_line) ; Om det är någon av de tio sista raderna...
+			{
+				console_txt = %console_txt%%A_LoopReadLine%`n ; Lägg till raden i %console_txt%
+			}
+		}
+		GuiControl, console:, console, %console_txt% ; Ersätter innehållet i textfältet i console-fönstret med det som precis lästes in.
+	}
 }

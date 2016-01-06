@@ -1,0 +1,120 @@
+﻿
+160106 21:28:54 - Ny bredd på void: 251
+160106 21:29:06 - Ny bredd på void: 251
+160106 21:29:26 - Ny bredd på void: 297
+160106 21:29:27 - Ny bredd på void: 244
+21:32:01 - Nya dimensioner på Void: x4 y781 w244 h232
+21:32:27 - Nya dimensioner på Void: x4 y781 w289 h232
+21:32:33 - Nya dimensioner på Void: x4 y781 w237 h232
+21:32:40 - Nya dimensioner på Void: x1924 y781 w237 h256
+21:32:58 - Nya dimensioner på Void: x5 y781 w237 h223
+21:32:59 - Nya dimensioner på Void: x5 y452 w237 h32
+21:32:59 - Nya dimensioner på Void: x4 y452 w237 h32
+21:33:00 - Nya dimensioner på Void: x4 y452 w237 h561
+21:33:05 - Nya dimensioner på Void: x4 y718 w237 h295
+21:41:01 - Startade timer för Void
+21:42:11 - MedialinkPlus startat - funktioner inladdade.
+21:42:11 - Startade timer för Void.
+21:42:20 - Nya dimensioner på Void: x4 y718 w237 h295
+21:42:22 - Öppnar högerklicksmeny.
+21:42:28 - Öppnar högerklicksmeny.
+21:44:25 - MedialinkPlus startat - funktioner inladdade.
+21:44:25 - Startade timer för Void.
+21:44:29 - Nya dimensioner på Void: x4 y718 w237 h295
+21:44:57 - Öppnar högerklicksmeny.
+21:49:36 - MedialinkPlus startat - funktioner inladdade.
+21:49:36 - Startade timer för Void.
+21:49:39 - Nya dimensioner på Void: x4 y718 w237 h295
+21:56:35 - MedialinkPlus startat - funktioner inladdade.
+21:56:35 - Startade timer för Void.
+21:56:38 - Nya dimensioner på Void: x4 y718 w237 h295
+22:02:23 - MedialinkPlus startat - funktioner inladdade.
+22:02:23 - Startade timer för Void.
+22:02:24 - Nya dimensioner på Void: x4 y718 w237 h295
+22:02:35 - Öppnar högerklicksmeny.
+22:06:34 - MedialinkPlus startat - funktioner inladdade.
+22:06:34 - Startade timer för Void.
+22:06:39 - Nya dimensioner på Void: x4 y718 w237 h295
+22:06:54 - Nya dimensioner på Void: x4 y718 w250 h295
+22:07:00 - Nya dimensioner på Void: x4 y718 w234 h295
+22:08:20 - MedialinkPlus startat - funktioner inladdade.
+22:08:20 - Startade timer för Void.
+22:08:22 - Nya dimensioner på Void: x4 y718 w234 h295
+22:08:24 - Nya dimensioner på Void: x4 y716 w234 h297
+22:08:25 - Nya dimensioner på Void: x4 y722 w234 h291
+22:08:27 - Nya dimensioner på Void: x4 y720 w234 h293
+22:08:34 - Nya dimensioner på Void: x4 y720 w245 h293
+22:08:36 - Nya dimensioner på Void: x4 y720 w232 h293
+22:09:14 - MedialinkPlus startat - funktioner inladdade.
+22:09:14 - Startade timer för Void.
+22:09:16 - Nya dimensioner på Void: x4 y720 w232 h293
+22:09:22 - Nya dimensioner på Void: x4 y720 w236 h293
+22:09:34 - Nya dimensioner på Void: x4 y720 w230 h293
+22:11:35 - MedialinkPlus startat - funktioner inladdade.
+22:11:35 - Startade timer för Void.
+22:11:36 - Nya dimensioner på Void: x4 y720 w230 h293
+22:11:42 - Nya dimensioner på Void: x4 y720 w244 h293
+22:11:49 - Nya dimensioner på Void: x4 y720 w231 h293
+22:12:21 - MedialinkPlus startat - funktioner inladdade.
+22:12:21 - Startade timer för Void.
+22:12:23 - Nya dimensioner på Void: x4 y720 w231 h293
+22:12:25 - Nya dimensioner på Void: x4 y720 w248 h293
+22:12:27 - Nya dimensioner på Void: x4 y720 w244 h293
+22:12:32 - Nya dimensioner på Void: x4 y720 w240 h293
+22:14:40 - MedialinkPlus startat - funktioner inladdade.
+22:14:40 - Startade timer för Void.
+22:14:42 - Nya dimensioner på Void: x4 y720 w240 h293
+22:16:00 - MedialinkPlus startat - funktioner inladdade.
+22:16:00 - Startade timer för Void.
+22:16:02 - Nya dimensioner på Void: x4 y720 w240 h293
+22:16:12 - Nya dimensioner på Void: x4 y720 w259 h293
+22:17:53 - MedialinkPlus startat - funktioner inladdade.
+22:17:53 - Startade timer för Void.
+22:17:54 - Nya dimensioner på Void: x4 y720 w259 h293
+22:18:00 - Nya dimensioner på Void: x4 y720 w272 h293
+22:18:04 - Nya dimensioner på Void: x4 y720 w243 h293
+22:19:23 - MedialinkPlus startat - funktioner inladdade.
+22:19:23 - Startade timer för Void.
+22:19:26 - Nya dimensioner på Void: x4 y720 w243 h293
+22:19:33 - Nya dimensioner på Void: x1924 y720 w243 h317
+22:19:38 - Nya dimensioner på Void: x5 y720 w243 h317
+22:19:38 - Nya dimensioner på Void: x5 y720 w243 h284
+22:19:38 - Nya dimensioner på Void: x5 y452 w243 h32
+22:19:40 - Nya dimensioner på Void: x4 y452 w243 h32
+22:19:40 - Nya dimensioner på Void: x4 y452 w243 h561
+22:19:43 - Nya dimensioner på Void: x4 y666 w243 h347
+22:21:02 - MedialinkPlus startat - funktioner inladdade.
+22:21:02 - Startade timer för Void.
+22:21:03 - Nya dimensioner på Void: x4 y666 w243 h347
+22:21:04 - 
+22:21:11 - Nya dimensioner på Void: x4 y666 w248 h347
+22:21:12 - Nya dimensioner på Void: x4 y666 w243 h347
+22:21:51 - MedialinkPlus startat - funktioner inladdade.
+22:21:51 - Startade timer för Void.
+22:21:51 - Nya dimensioner på Void: x4 y666 w243 h347
+22:21:53 - 
+22:22:11 - MedialinkPlus startat - funktioner inladdade.
+22:22:11 - Startade timer för Void.
+22:22:12 - Nya dimensioner på Void: x4 y666 w243 h347
+22:22:13 - Ã–ppnar console...
+22:26:28 - Nya dimensioner på Void: x-31996 y615 w243 h347
+22:26:30 - Nya dimensioner på Void: x4 y666 w243 h347
+22:26:37 - Öppnar högerklicksmeny.
+22:26:40 - Ã–ppnar console...
+22:27:19 - MedialinkPlus startat - funktioner inladdade.
+22:27:19 - Startade timer för Void.
+22:27:20 - Nya dimensioner på Void: x4 y666 w243 h347
+22:27:21 - Öppnar console...
+22:28:11 - MedialinkPlus startat - funktioner inladdade.
+22:28:11 - Startade timer för Void.
+22:28:12 - Öppnar console...
+22:28:21 - MedialinkPlus startat - funktioner inladdade.
+22:28:21 - Startade timer för Void.
+22:28:21 - Öppnar console...
+22:28:39 - MedialinkPlus startat - funktioner inladdade.
+22:28:39 - Startade timer för Void.
+22:28:39 - Öppnar console...
+22:28:50 - MedialinkPlus startat - funktioner inladdade.
+22:28:50 - Startade timer för Void.
+22:28:50 - Öppnar console...
+22:35:27 - Nya dimensioner på Void: x4 y666 w243 h347
