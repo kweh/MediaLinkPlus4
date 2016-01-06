@@ -11,15 +11,16 @@
 ; * Inkluderar filer
 ; ************************************************************
 
-; GUI-filer
-#include gui/gui_cxense_post.ahk
-
 ; Funktioner
 #include functions/func_main.ahk
+toLog("MedialinkPlus startat - funktioner inladdade.")
 
+; ************************************************************
+; * Timers
+; ************************************************************
 
-
-
+SetTimer, gui_void_check, 500
+toLog("Startade timer för Void.")
 
 ; ************************************************************
 ; * Huvudscript
@@ -35,12 +36,16 @@ Rbutton:: ; Vid klick på höger musknapp
 	}
 	Menu, r_menu, Add, Ordernummer, get_ordernumber
 	Menu, r_menu, Add, Test, get_ordernumber
+	toLog("Öppnar högerklicksmeny.")
 	Menu, r_menu, Show
 	menu := true ; Sätter %menu% till 'true'. Dvs att menyn har visats en gång
 Return
 
 #if ; Slut på mlActive-ifsats
 
+^#!c::
+	gosub, gui_console
+return
 
 
 ; ************************************************************
@@ -48,4 +53,12 @@ Return
 ; ************************************************************
 
 return
+
+; GUI-filer
+#include gui/gui_cxense_post.ahk
+#include gui/gui_void.ahk
+
+; Console
+#include gui/gui_console.ahk
+
 #include r_menu.ahk
