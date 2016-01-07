@@ -30,7 +30,7 @@
 	}
 	Else
 	{
-		Gui, void:Hide
+		; Gui, void:Hide
 	}
 return
 
@@ -46,6 +46,6 @@ gui_void:
 
 
 	Gui, void:Show, x%voidx% y%voidy% w%voidw% h%voidh% NoActivate, void
-	Gui, void:+ToolWindow -Caption +Border +Owner%mlHwnd% +AlwaysOnTop
+	Gui, void:+ToolWindow -Caption +Border +Owner%mlHwnd%
 	Gui, void:Color, ffffff
 return

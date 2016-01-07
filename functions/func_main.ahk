@@ -11,7 +11,7 @@
 ; * - namnet på den control som befinner sig under muspekaren
 ; * - 'false' om det aktiva fönstret inte är MediaLink eller om control inte är en listvy
 ; *
-; *******************************************************************************************
+; ******************************************************************************************
 
 mlActive(x=false)
 {
@@ -43,7 +43,7 @@ mlActive(x=false)
 ; * - - stripped	| endast ordernumret exkl. materialnummer
 ; * - - material 	| endast materialnumret
 ; *
-; *******************************************************************************************
+; ******************************************************************************************
 
 getOrdernumber(x=False)
 {
@@ -62,6 +62,55 @@ getOrdernumber(x=False)
 	return obj ; returnerar objektet
 }
 
+
+
+; ******************************************************************************************
+; *  getPrint()
+; * ----------------------------------------------------------------------------------------
+; * Hämtar och returnerar url till print-pdf och eProof på vald post i MediaLink
+; * ----------------------------------------------------------------------------------------
+; * INPUT:
+; * - Ordernummer utan materialnummer
+; * - Materialnummer (valfritt, om inget anges sätts denna till 01)
+; *
+; * OUTPUT:
+; * - Ett objekt med två keys:
+; * - - pdf			| sökväg till printannons som pdf
+; * - - jpg			| sökväg till eproof-bild
+; *
+; ******************************************************************************************
+
+getPrint(ordernr, mnr="01")
+{
+	obj := Object() ; Gör %obj% till ett tomt objekt
+	StringTrimLeft, last_two, ordernr, 8 ; Sätter %last_two% till de sista två siffrorna i ordernumret
+	StringTrimLeft, no_leading_zeroes, ordernr, 3 ; Sätter %no_leading_zeroes% till ordernumret exkl. inledande nollor.
+	pdf_path = \\nt.se\Adbase\Annonser\Ad\%last_two%\10%no_leading_zeroes%-%mnr%.pdf ; Sätter sökväg för pdf med variabler
+	img_path = \\nt.se\Adbase\Annonser\eProof\%no_leading_zeroes%-%mnr%.jpg ; Sätter sökväg för jpg med variabler
+
+	IfExist, %pdf_path% ; Om det finns en pdf på %pdf_path%...
+	{
+		obj.pdf := pdf_path ; Sätt %obj.pdf% till sökvägen till pdf-filen
+		IfExist, %img_path% ; Och om det finns en jpg på %img_path%...
+		{
+			obj.jpg := img_path ; Sätt %obj.jpg% till sökvägen till jpg-filen
+		}
+		Else ; Om det inte finns någon jpg...
+		{
+			obj.jpg := false ; Sätt %obj.jpg% till false
+		}
+	}
+	Else ; Om det inte finns någon pdf...
+	{
+		obj.pdf := false ; Sätt %obj.pdf% till false
+		obj.jpg := false ; Sätt %obj.jpg% till false
+	}
+	return obj ; Returnerar objektet
+
+}
+
+
+
 ; ******************************************************************************************
 ; *  toLog
 ; * ----------------------------------------------------------------------------------------
@@ -75,7 +124,7 @@ getOrdernumber(x=False)
 ; * OUTPUT:
 ; * - Ingen output, endast append till textfil
 ; *
-; *******************************************************************************************
+; ******************************************************************************************
 
 toLog(txt)
 {
