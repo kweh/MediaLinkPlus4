@@ -272,7 +272,9 @@ SELECT
 	aoincampaign.campaigntypeid	 	as 'kampanjtyp-ID',
 	convert(varchar(max), convert(varbinary(8000),shblobdata.blobdata)) as 'Interna noteringar',
 	AoAdOrder.CreateDate					as 'Skapad datum',
-	AoAdOrder.LastEditDate				as 'Senast ändrad'
+	AoAdOrder.LastEditDate				as 'Senast ändrad',
+	CfInSection.Name						as 'Sektion'
+
 
 FROM aoincampaign
 LEFT JOIN AoInflight 			ON aoinflight.campaignid 				= aoincampaign.id
@@ -280,10 +282,11 @@ LEFT JOIN AoProducts 			ON AoProducts.Id 							= aoinflight.siteID
 LEFT JOIN CfInUnitType 			ON CfInUnitType.Id 						= aoinflight.internetunitid
 LEFT JOIN AoOrderCustomers 	ON AoOrderCustomers.AdOrderId			= aoinflight.adorderid
 LEFT JOIN Customer 				ON Customer.AccountId					= AoOrderCustomers.CustomerId 
-LEFT JOIN AoAdOrder 				ON AoAdOrder.Id 							= AoInCampaign.AdOrderId
+LEFT JOIN AoAdOrder 			ON AoAdOrder.Id 							= AoInCampaign.AdOrderId
 LEFT JOIN AoSpecialPrice 		ON AoSpecialPrice.AoInFlightId		= AoInflight.Id
 LEFT JOIN UsrUsers				ON UsrUsers.UserId						= AoAdOrder.SellerId
-LEFT JOIN ShBlobData				ON ShBlobData.Id							= AoInCampaign.InternalNotesID
+LEFT JOIN ShBlobData			ON ShBlobData.Id							= AoInCampaign.InternalNotesID
+LEFT JOIN CfInSection			ON CfInSection.Id							= AoInFlight.SectionId
 
 WHERE 
 	campaigntypeid IN (1,4,8)
@@ -297,6 +300,7 @@ WHERE
 	c_enddate := 4
 	c_product := 5
 	c_unit_id := 6
+	c_unit_name := 7
 	c_customer_nr := 8
 	c_customer_name := 9
 	c_net_price := 11
@@ -307,6 +311,7 @@ WHERE
 	c_internalnotes := 17
 	c_createdate := 18
 	c_changedate := 19
+	c_section := 20
 
 	; Populerar objektet med keys och values
 	order.customer_name 	:= query[2, c_customer_name]
@@ -316,7 +321,8 @@ WHERE
 	order.startdate 		:= query[2, c_startdate]
 	order.enddate 			:= query[2, c_enddate]
 	unit_id 				:= query[2, c_unit_id]
-	order.unit_id 			:= query[2, c_unit_id]
+	order.unit_id 			:= query[2, c_unit_id]	
+	order.unit_name 		:= query[2, c_unit_name]	
 	product 				:= query[2, c_product]
 	order.product 			:= query[2, c_product]	
 	order.format 			:= getFormat(unit_id)
@@ -333,6 +339,7 @@ WHERE
 	order.internalnotes 	:= query[2,c_internalnotes]
 	order.createdate 		:= query[2,c_createdate]
 	order.changedate 		:= query[2,c_changedate]
+	order.section 			:= query[2,c_section]
 
 	return order ; returnerar objektet
 }
@@ -461,4 +468,41 @@ getFormat(id)
 	format := id = "200"		? "ARTIKEL" : format
 
 	return format
+}
+
+
+
+; SPLASH-gui
+SplashImageGUI(Picture, X, Y, Duration, Transparent = false)
+{
+Gui, XPT99:Margin , 0, 0
+Gui, XPT99:Add, Picture,, %Picture%
+Gui, XPT99:Color, ECE9D8
+Gui, XPT99:+LastFound -Caption +AlwaysOnTop +ToolWindow -Border
+If Transparent
+{
+Winset, TransColor, ECE9D8
+}
+Gui, XPT99:Show, x%X% y%Y% NoActivate, Splash1
+return
+}
+
+
+; Gör om från AdBase-sektion till ntm-keyword
+make_keyword(section)
+{
+	StringReplace, section, section, å, a, All
+	StringReplace, section, section, ä, a, All
+	StringReplace, section, section, ö, o, All
+	StringReplace, section, section, %A_SPACE%-%A_SPACE%, -, All
+	StringReplace, section, section, %A_SPACE%&%A_SPACE%, -, All
+	StringReplace, section, section, %A_SPACE%&&%A_SPACE%, -, All
+	StringReplace, section, section, %A_SPACE%, -, All
+	StringLower, section, section
+	section = ntm-%section%
+	if (section = "ntm-")
+	{
+		return ""
+	}
+	return section
 }
